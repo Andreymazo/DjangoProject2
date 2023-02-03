@@ -15,7 +15,7 @@ class UserCustomProfileView(UpdateView):
     model = UserCustom
     template_name = 'CustomUser/profile.html'
     form_class = CustomUserForm
-    # success_url = reverse_lazy('mailing_service:list')
+    success_url = reverse_lazy('mailing_service:list')
 
     def get_object(self, queryset=None):
         return self.request.user
